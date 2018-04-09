@@ -29,7 +29,7 @@ class htmlPage:
         tempstr = ""
         tempstr+= "Content-type:text/html\r\n\r\n"
         tempstr+= "<!DOCTYPE html> \n "
-        tempstr+= "<html lang='en'>\n"
+        tempstr+= "<html lang='it'>\n"
         tempstr+= "<head>\n"
         tempstr+= '<meta charset="UTF-8">\n'
         
@@ -39,7 +39,7 @@ class htmlPage:
         except :
             1
         
-        tempstr+= "<meta name='keywords' content='joyce ulysses concordance literature modernism'>\n"
+        tempstr+= "<meta name='keywords' content='dante concordanze letteratura divina commedia'>\n"
         tempstr+= '<link href="/css/ulysses.css" type="text/css" rel="stylesheet">\n'
         tempstr+= "<title>" + self.title + "</title>\n"
         tempstr+= '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>'
@@ -63,7 +63,7 @@ class htmlPage:
 	#
         tempstr = ""
         tempstr += "<div id='footer'>\n"
-        tempstr += "<p>Ulysses text from <a href='http://www.gutenberg.org/files/4300'>gutenberg.org</a>\n"
+        tempstr += "<p>Text from <a href='http://www.gutenberg.org/ebooks/1012'>gutenberg.org</a>\n"
         tempstr += "(<a href='http://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License'>license</a>)</p>\n"
         tempstr += "<p>By <a href='http://andreamoro.net'>Andrea Moro</a>, Vanderbilt University, "
         tempstr += "<a href='mailto:andrea@andreamoro.net'>andrea at andreamoro dot net </a>"
