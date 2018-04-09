@@ -1,0 +1,103 @@
+body {
+  background-color: aliceblue;
+  padding: 20px;
+  font-family: 'Raleway', serif;
+    font-size: 15px;
+  }
+div { margin: 0}
+div.footer {
+  clear: both;
+  margin-top: 100px}
+
+a { color: #6F7064}
+.row a {color: black}
+
+h1,h2,h3 {
+  font-family: 'Arvo', sans-serif;
+
+}
+
+h1,h2,#footer,#sandbox {   background-color: #FFD8D6;
+  padding: 5px;
+  border: 1px solid black;}
+
+h3 { margin-left: 66px}
+
+#list {
+   float:left;
+   width: 300px;
+   display: inline-block;
+ }
+#text {clear:both;
+  margin-top: 40px;
+
+}
+#form {
+  display: inline-block;
+  margin-left:20px;
+  text-align: left;
+}
+
+#footer {
+  margin-top: 200px;
+}
+#sandbox {
+  margin-top: 20px;
+}
+form {margin: 0 0 40px 20px}
+
+.highlight, .hl2 {
+  background-color: #FFD8D6;
+  border: 1px solid black;
+  padding: 0px 2px;
+}
+
+.hl2 {
+  padding: 0;
+}
+
+span.row{
+  display: inline-block;
+   height: auto;
+   text-align: left;
+   vertical-align: middle;
+   margin-left: 16px;
+
+}
+span.rown, span.rownp {
+  color: Grey;
+  display: inline-block;
+ width: 50px;
+ height: auto;
+ text-align: right;;
+
+ vertical-align: middle;
+ float:left;
+ clear:both;
+}
+
+span.rownp {
+  width: 220px;
+}
+
+.addlinks {
+  padding: 2px 4px;
+  border: 1px solid Grey;
+  background-color: white;
+    font-weight: normal;
+}
+input[type=submit] {
+  padding: 2px 4px;
+  font-size: 15px;
+  font-weight: normal;
+  height: 26px;
+}
+input[type=text] {
+  height: 20px;
+  padding-bottom: 0px
+}
+
+#sandbox {
+  margin: 30px 66px;
+  }
+.wait { cursor: wait;}
