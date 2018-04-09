@@ -231,7 +231,6 @@ class dantePage (htmlPage):
         html += " <input type='checkbox' name='cs' " + checked +"> case sensitive \n"
         html += " <input type='checkbox' name='ww' " + wwchecked +"> parola intera\n"
         html += "<input type='hidden' name='ww' value='off' >"
-        html += "<p><span class='addlinks' id='addlinks'>Linka ogni parola</span> (attendi alcuni secondi)</p> \n"
         html += "</form>\n "
 
         return html
@@ -365,7 +364,7 @@ class dantePage (htmlPage):
 
 
 if __name__ == "__main__":
-    p = dantePage(episodeN=0,word='',t="Concordanze nella Divina Commedia di Dante",
-                    h="Concordanze nella Divina Commedia di Dante")
+    p = dantePage(episodeN=0,word='',t="Concordanze nella Divina Commedia di Dante (beta)",
+                    h="Concordanze nella Divina Commedia di Dante (beta)")
     print(p.generate())
     #print(p.episodeN)

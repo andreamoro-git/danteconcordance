@@ -13,8 +13,8 @@ import urllib.parse
 class danteCountsPage (dantePage):
 
     def __init__ (self,episodeN=0,resetcache=0):
-        dantePage.__init__ (self,t= "Joyce's dante word counts ",
-			    h="Joyce's dante word counts")
+        dantePage.__init__ (self,t= "Divina commedia contatore di parole",
+			    h="Divina commedia contatore di parole")
         dir_path = os.path.dirname(os.path.realpath(__file__))
         textFile = open(dir_path+"/1012-0.txt","r")
         self.lines = textFile.read().split("\n")
