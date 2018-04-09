@@ -47,7 +47,7 @@ $(document).ready(function(){
   }
 
   // add links on click
-  $('#addlinks').click(function() {
+//  $('#addlinks').click(function() {
     var $allrows = $('span.row');
     $.each($allrows, function(i,v) {
       var $this = $(this);
@@ -67,8 +67,8 @@ $(document).ready(function(){
         };
       });
     });
-  });
+//  });
 
-  addHighLight(wordq,ww);
+//  addHighLight(wordq,ww);
 
 });

@@ -91,7 +91,15 @@ class dantePage (htmlPage):
 #        print(self.epnames)
 #        return self.epbounds
 
-        self.epbounds = [22, 159, 302, 439, 591, 734, 850, 981, 1112, 1246, 1383, 1499, 1639, 1791, 1934, 2059, 2196, 2333, 2470, 2604, 2735, 2875, 3027, 3176, 3328, 3480, 3623, 3760, 3903, 4043, 4192, 4338, 4478, 4636, 4777, 4914, 5048, 5194, 5334, 5471, 5623, 5760, 5900, 6046, 6186, 6329, 6466, 6621, 6773, 6919, 7065, 7205, 7351, 7497, 7649, 7786, 7941, 8075, 8230, 8370, 8519, 8662, 8811, 8966, 9112, 9258, 9419, 9566, 9709, 9858, 9989, 10132, 10272, 10415, 10564, 10713, 10856, 11005, 11145, 11291, 11434, 11574, 11723, 11878, 12021, 12158, 12307, 12456, 12599, 12754, 12894, 13049, 13189, 13332, 13481, 13621, 13767, 13916, 14059, 14211, 14356]
+        self.epbounds = [22, 159, 302, 439, 591, 734, 850, 981, 1112, 1246, 1383, 1499, 1639, 
+                         1791, 1934, 2059, 2196, 2333, 2470, 2604, 2735, 2875, 3027, 3176, 3328, 
+                         3480, 3623, 3760, 3903, 4043, 4192, 4338, 4478, 4636, 4777, 4914, 5048, 
+                         5194, 5334, 5471, 5623, 5760, 5900, 6046, 6186, 6329, 6466, 6621, 6773, 
+                         6919, 7065, 7205, 7351, 7497, 7649, 7786, 7941, 8075, 8230, 8370, 8519, 
+                         8662, 8811, 8966, 9112, 9258, 9419, 9566, 9709, 9858, 9989, 10132, 10272, 
+                         10415, 10564, 10713, 10856, 11005, 11145, 11291, 11434, 11574, 11723, 11878, 
+                         12021, 12158, 12307, 12456, 12599, 12754, 12894, 13049, 13189, 13332, 13481, 
+                         13621, 13767, 13916, 14059, 14211, 14356]
         self.epnames = ['  Inferno • Canto I', '  Inferno • Canto II', '  Inferno • Canto III',
                         '  Inferno • Canto IV', '  Inferno • Canto V', '  Inferno • Canto VI',
                         '  Inferno • Canto VII', '  Inferno • Canto VIII', '  Inferno • Canto IX',
@@ -334,6 +342,8 @@ class dantePage (htmlPage):
             html+= "<h2>"+self.epnames[episodeN-1]+"</h2>\n"
             start = self.epbounds[episodeN-1]
             end = self.epbounds[episodeN]-1
+            if episodeN==34 or episodeN==67 :
+                end = end-1
             verse = 0
             for lineN in range(start,end):
                 if (lines[lineN] != '') :
@@ -341,14 +351,15 @@ class dantePage (htmlPage):
                 html+= self.addNameAnchor(str(verse),lines[lineN]) + "\n"
                 if verse%3 == 0 and lineN+2 != end:
                     html+= '<div> &nbsp</div>'
-
+            if episodeN==100 :
+                html+= self.addNameAnchor(str(verse),lines[end]) + "\n"
         html+= "</div>\n"
         if episodeN<Nepisodes and episodeN>0:
             html+= "<div id='sandbox'>\n"
             html+= "<a href='dantepage.py?e="+str(episodeN+1)
             html+= "'>Successivo: "+self.epnames[episodeN]+"</a>\n"
             html+= "</div>\n"
-            html+= str(start)+'aa'+str(end)
+            #html+= str(start)+'aa'+str(end)
 
         return html
 
