@@ -245,7 +245,7 @@ class dantePage (htmlPage):
 #        else:
 #            wwchecked = ''
         html = ''
-        html += "<h2>Count words</h2>\n<form action ='dantecounts.py'> \n"
+        html += "<h2>Contaparole</h2>\n<form action ='dantecounts.py'> \n"
 
         #episode
         html += '<select onchange="this.form.submit()" name="e">\n'
