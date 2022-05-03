@@ -37,10 +37,6 @@ for idx,bound in enumerate(p.epbounds):
 randomterc = [line.strip() for line in randomterc]
 tercstr = "\n".join(randomterc)
 
-# load twitter API credentials
-with open('modify-here/creds-twitter') as f:
-    lines = f.read().splitlines()
-
 verses = " ("+str(cantorand-startoffset+1) + "-" + str(cantorand-startoffset+1+len(randomterc))+")"
 
 if idx<34:
@@ -61,5 +57,19 @@ tweet = (tercstr + "\n\n-- " + p.epnames[idx].strip() + verses
          + "#row"+str(begin-p.epbounds[idx]+1)
          )
 
+with open('path-/creds-twitter') as f:
+    lines = f.read().splitlines()
+
 twitter = Twython(lines[0], lines[1], lines[2], lines[3])
-twitter.update_status(status= tweet)
+twpost = twitter.update_status(status= tweet)
+
+import facebook
+with open('path-/creds-facebook') as f:
+    lines = f.read().splitlines()
+graph = facebook.GraphAPI(access_token= lines[0], version="3.1")
+
+fbpost = graph.put_object(parent_object='me', connection_name='feed', message=tweet)
+
+print(tweet)
+print('\nfacebook: ', fbpost)
+print('twitter: ', twpost['user']['name']+'/'+str(twpost['id']))
