@@ -46,9 +46,7 @@ for idx,bound in enumerate(p.epbounds):
 randomterc = [line.strip() for line in randomterc]
 tercstr = "\n".join(randomterc)
 
-# canto line numbers
-verses = " ("+str(cantorand-startoffset+1) + "-" + str(cantorand-startoffset+1+len(randomterc))+")"
-
+# define cantica, canto number, and verses' line numbers for output and links
 if idx<34:
     cantica = 'Inf'
     canto = idx+1
@@ -58,8 +56,9 @@ elif idx < 67:
 else:
     cantica = 'Par'
     canto = idx-66
+verses = " ("+str(cantorand-startoffset+1) + "-" + str(cantorand-startoffset+1+len(randomterc))+")"
 
-# final string, including links to commentary
+# build final string, including links to commentary
 tweet = (tercstr + "\n\n-- " + p.epnames[idx].strip() + verses
          + "\n\nCommenti: https://dante.princeton.edu/cgi-bin/dante/campuscgi/mpb/GetCantoSection.pl?INP_POEM="
          + cantica + '&INP_SECT=' + str(canto) + "&INP_START=1&INP_LEN=150&LANG=2"
